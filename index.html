@@ -14,9 +14,9 @@
     }
 
     hr {
-            width: 50%; /* 设置固定长度，可以调整 */
-            margin: 20px auto; /* 设置上下外边距并居中 */
-            border: 1px solid gray; /* 设置灰色边框 */
+      width: 85%; /* 设置分割线宽度与按钮宽度相同 */
+      margin: 20px auto; /* 设置上下外边距并居中 */
+      border: 1px solid gray; /* 更细的分割线 */
     }
 
     .header {
@@ -35,11 +35,13 @@
 
     .check-icon {
       margin-top: 40px;
+      height: 40vh; /* 设置图片高度为当前页面高度的40% */
     }
 
     .check-icon img {
-      width: 200px;
-      height: 310px;
+      width: 100%; /* 图片宽度根据父容器缩放 */
+      height: 100%; /* 图片高度根据父容器缩放 */
+      object-fit: contain; /* 保持图片比例 */
     }
 
     .message {
@@ -53,20 +55,26 @@
       margin-top: 30px;
       font-size: 18px;
       line-height: 2;
+      text-align: left; /* Left-align the text */
+      display: inline-block; /* Make the container inline to center it */
+      width: 47%; /* Set width to 85% of the page */
     }
 
     .button {
       margin-top: 40px;
+      width: 85%; /* Set button width to 85% */
+      margin-left: 7.5%; /* Center the button */
     }
 
     .button button {
       background-color: #1e90ff;
       color: white;
       padding: 12px 40px;
-      font-size: 18px;
+      font-size: 15px;
       border: none;
       border-radius: 25px;
       cursor: pointer;
+      width: 100%; /* Button width is 100% of its container */
     }
 
     .button button:hover {
@@ -81,14 +89,13 @@
   </div>
 
   <div class="info">
-    员工姓名：同玺<br>
-    员工工号：4764<br>
-    所属部门：技术服务部<br>
-    <span id="time"></span>
-
+    <div>员工姓名：同玺</div>
+    <div>员工工号：4764</div>
+    <div>所属部门：技术服务部</div>
+    <div><span id="time"></span></div>
   </div>
 
- <hr>
+  <hr>
 
   <div class="button">
     <button onclick="alert('返回首页')">返回首页</button>
